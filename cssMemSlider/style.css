@@ -1,0 +1,73 @@
+img{
+    width: 90vw;
+    height: 70vh;
+}
+img,p,input{
+    display: none;
+}
+p{
+    font-size: 20px;
+    color: white;
+}
+body{
+    background-color: rgb(37,40,42);
+}
+.container{
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+}
+.meta-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.controls{
+    display: none;
+    align-items: center;
+}
+label{
+    cursor: pointer;
+}
+.text-controls-block{
+    display: flex
+}
+input:checked + .slider-content img{
+    display: block;
+}
+input:checked + .slider-content p.slide-text{
+    display: block;
+}
+input:checked + .slider-content .text-controls-block .controls{
+    display: flex;
+}
+#memInput1:checked + .slider-content .text-controls-block .controls #memLabel1,
+#memInput2:checked + .slider-content .text-controls-block .controls #memLabel2,
+#memInput3:checked + .slider-content .text-controls-block .controls #memLabel3,
+#memInput4:checked + .slider-content .text-controls-block .controls #memLabel4 {
+    color: white;
+}
+@media screen and (min-width: 768px) {
+   .text-controls-block{
+       justify-content: space-between;
+   }
+}
+@media screen and (max-width: 767px) {
+    .slider-content{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .text-controls-block{
+        flex-direction: column;
+    }
+    .slide-text{
+        order: 1;
+    }
+    .controls{
+        align-self: center;
+    }
+}
