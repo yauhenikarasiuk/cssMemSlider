@@ -76,12 +76,12 @@ input:checked + .slider-content .text-controls-block .controls{
 #memInput4:checked + .slider-content .text-controls-block .controls #memLabel4 .icon{
     background-color: rgb(37,40,42);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 500px) {
    .text-controls-block{
        justify-content: space-between;
    }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 499px) {
     .slider-content{
         display: flex;
         flex-direction: column;
