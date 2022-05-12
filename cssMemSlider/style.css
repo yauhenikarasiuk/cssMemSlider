@@ -30,7 +30,18 @@ body{
     align-items: center;
 }
 label{
+    width: 15px;
+    height: 15px;
+    background-color: rgb(114,171,254);
+    border-color: rgb(114,171,254);
+    border-width: 2px;
+    border-radius: 15px;
+    border-style: solid;
     cursor: pointer;
+}
+label:hover{
+    background-color: white;
+    border-color: white;
 }
 .text-controls-block{
     display: flex
@@ -48,7 +59,7 @@ input:checked + .slider-content .text-controls-block .controls{
 #memInput2:checked + .slider-content .text-controls-block .controls #memLabel2,
 #memInput3:checked + .slider-content .text-controls-block .controls #memLabel3,
 #memInput4:checked + .slider-content .text-controls-block .controls #memLabel4 {
-    color: white;
+    background-color: rgb(37,40,42);
 }
 @media screen and (min-width: 768px) {
    .text-controls-block{
