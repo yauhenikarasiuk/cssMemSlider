@@ -1,3 +1,7 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
 img{
     width: 90vw;
     height: 70vh;
@@ -56,9 +60,11 @@ label{
 }
 input:checked + .slider-content img{
     display: block;
+    animation: fadeIn 1s;
 }
 input:checked + .slider-content p.slide-text{
     display: block;
+    animation: fadeIn 1s;
 }
 input:checked + .slider-content .text-controls-block .controls{
     display: flex;
