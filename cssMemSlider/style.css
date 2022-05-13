@@ -51,7 +51,7 @@ label{
     border-radius: 1rem;
     border-style: solid;
 }
-.icon:hover{
+label:hover .icon{
     background-color: white;
     border-color: white;
 }
