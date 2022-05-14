@@ -55,6 +55,10 @@ label:hover .icon{
     background-color: white;
     border-color: white;
 }
+label:active .icon{
+    background-color: grey;
+    border-color: grey;
+}
 .text-controls-block{
     display: flex
 }
