@@ -1,0 +1,123 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+img{
+    width: 60rem;
+    height: 40rem;
+}
+img,p,input{
+    display: none;
+}
+p{
+    font-size: 1.5rem;
+    color: white;
+}
+body{
+    background-color: rgb(37,40,42);
+}
+.container{
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+}
+.slider-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.controls{
+    display: none;
+    align-items: center;
+}
+
+label{
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(114,171,254);
+    border-color: rgb(114,171,254);
+    border-width: 0.15rem;
+    border-radius: 1rem;
+    border-style: solid;
+}
+label:hover .icon{
+    background-color: white;
+    border-color: white;
+}
+label:active .icon{
+    background-color: grey;
+    border-color: grey;
+}
+.text-controls-block{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+input:checked + .slider-content img{
+    display: block;
+    animation: fadeIn 1s;
+}
+input:checked + .slider-content p.slide-text{
+    display: block;
+    animation: fadeIn 1s;
+}
+input:checked + .slider-content .text-controls-block .controls{
+    display: flex;
+    column-gap: 0.5rem;
+}
+#memInput1:checked + .slider-content .text-controls-block .controls #memLabel1 .icon,
+#memInput2:checked + .slider-content .text-controls-block .controls #memLabel2 .icon,
+#memInput3:checked + .slider-content .text-controls-block .controls #memLabel3 .icon,
+#memInput4:checked + .slider-content .text-controls-block .controls #memLabel4 .icon{
+    background-color: rgb(37,40,42);
+}
+
+@media screen and (max-width: 60rem) {
+    img{
+        width: 40rem;
+        height: 26rem;
+    }
+}
+@media screen and (max-width: 40rem) {
+    img{
+        width: 30rem;
+        height: 20rem;
+    }
+}
+@media screen and (min-width: 500px) {
+   .text-controls-block{
+       justify-content: space-between;
+   }
+}
+@media screen and (max-width: 499px) {
+    img{
+        width: 20rem;
+        height: 15rem;
+    }
+    .slider-content{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.3rem;
+    }
+    .text-controls-block{
+        flex-direction: column;
+    }
+    .slide-text{
+        order: 1;
+    }
+    .controls{
+        align-self: center;
+    }
+}
